@@ -12,7 +12,7 @@
 - Proteus 8.12: simulate the PIC16F877 microcontroller and RS232 serial ports.
 - Virtual Serial Port Driver 6.9 by Eltima Software: create virtual serial ports and pair them.
 ## How to use
-- Use VSPD to create and pair two virtual COM ports: COM1 and COM2(can be changed)
+- Use VSPD to create and pair two virtual COM ports: COM1 and COM2 (can be changed)
 - Run the GUI.m file in MATLAB (version R2021b or above) to open the GUI.
 - Start the simulation in Proteus.
 - To connect/disconnect the GUI with Proteus, press the "Connect/Disconnect" button accordingly.
