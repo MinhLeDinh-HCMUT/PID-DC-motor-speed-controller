@@ -1,7 +1,8 @@
 # PID DC motor speed controller with PIC microcontroller
 ## Introduction 
 - This is an RS232-based PID DC motor controller.
-- The motor transfer function is modelised with state-space representation in Matlab. Because the microcontrollers work in the time-domain, so the motor model must be in that domain, too. That is why the state variable method is selected here.
+- The PID controller is program in inside the PIC microcontroller, where as the motor model is integrated with the GUI in MATLAB.
+- The motor transfer function is modelised with state-space representation. Because the microcontrollers work in the time domain, so the motor model must be in that domain, too. That is why the state variable method is selected here.
 ## PIC Microcontroller suitable for this project
 - PIC16F877
 - PIC16F877A
