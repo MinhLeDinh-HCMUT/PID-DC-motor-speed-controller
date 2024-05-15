@@ -3,9 +3,6 @@ classdef GUI < matlab.apps.AppBase
     % Properties that correspond to app components
     properties (Access = public)
         RS232PIDControllerUIFigure  matlab.ui.Figure
-        VoltageEditField            matlab.ui.control.EditField
-        VoltageEditFieldLabel       matlab.ui.control.Label
-        vLabel                      matlab.ui.control.Label
         sLabel                      matlab.ui.control.Label
         DurationSpinner             matlab.ui.control.Spinner
         DurationSpinnerLabel        matlab.ui.control.Label
@@ -155,14 +152,14 @@ classdef GUI < matlab.apps.AppBase
             app.SendButton.FontSize = 18;
             app.SendButton.Enable = 'off';
             app.SendButton.Visible = 'off';
-            app.SendButton.Position = [110 14 81 29];
+            app.SendButton.Position = [110 22 81 29];
             app.SendButton.Text = 'Send';
 
             % Create StartButton
             app.StartButton = uibutton(app.RS232PIDControllerUIFigure, 'push');
             app.StartButton.ButtonPushedFcn = createCallbackFcn(app, @StartButtonPushed, true);
             app.StartButton.FontSize = 18;
-            app.StartButton.Position = [110 14 81 29];
+            app.StartButton.Position = [110 22 81 29];
             app.StartButton.Text = 'Start';
 
             % Create PIC16F877PIDMotorSpeedControllerLabel
@@ -176,20 +173,20 @@ classdef GUI < matlab.apps.AppBase
             % Create rpmLabel
             app.rpmLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.rpmLabel.FontSize = 18;
-            app.rpmLabel.Position = [229 155 51 22];
+            app.rpmLabel.Position = [229 134 51 22];
             app.rpmLabel.Text = 'rpm';
 
             % Create rpmLabel_2
             app.rpmLabel_2 = uilabel(app.RS232PIDControllerUIFigure);
             app.rpmLabel_2.FontSize = 18;
-            app.rpmLabel_2.Position = [229 110 51 22];
+            app.rpmLabel_2.Position = [229 82 51 22];
             app.rpmLabel_2.Text = 'rpm';
 
             % Create ConnectButton
             app.ConnectButton = uibutton(app.RS232PIDControllerUIFigure, 'push');
             app.ConnectButton.ButtonPushedFcn = createCallbackFcn(app, @ConnectButtonPushed, true);
             app.ConnectButton.FontSize = 18;
-            app.ConnectButton.Position = [27 243 100 29];
+            app.ConnectButton.Position = [27 235 100 29];
             app.ConnectButton.Text = 'Connect';
 
             % Create DisconnectButton
@@ -197,26 +194,26 @@ classdef GUI < matlab.apps.AppBase
             app.DisconnectButton.ButtonPushedFcn = createCallbackFcn(app, @DisconnectButtonPushed, true);
             app.DisconnectButton.FontSize = 18;
             app.DisconnectButton.Enable = 'off';
-            app.DisconnectButton.Position = [144 243 104 29];
+            app.DisconnectButton.Position = [144 235 104 29];
             app.DisconnectButton.Text = 'Disconnect';
 
             % Create Lamp
             app.Lamp = uilamp(app.RS232PIDControllerUIFigure);
-            app.Lamp.Position = [260 248 20 20];
+            app.Lamp.Position = [260 240 20 20];
 
             % Create ConnectherefirstLabel
             app.ConnectherefirstLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.ConnectherefirstLabel.FontSize = 13;
             app.ConnectherefirstLabel.FontColor = [1 0 0];
             app.ConnectherefirstLabel.Visible = 'off';
-            app.ConnectherefirstLabel.Position = [24 272 112 22];
+            app.ConnectherefirstLabel.Position = [24 264 112 22];
             app.ConnectherefirstLabel.Text = 'Connect here first!';
 
             % Create DesiredspeedEditFieldLabel
             app.DesiredspeedEditFieldLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.DesiredspeedEditFieldLabel.HorizontalAlignment = 'right';
             app.DesiredspeedEditFieldLabel.FontSize = 18;
-            app.DesiredspeedEditFieldLabel.Position = [22 155 122 22];
+            app.DesiredspeedEditFieldLabel.Position = [22 134 122 22];
             app.DesiredspeedEditFieldLabel.Text = 'Desired speed';
 
             % Create DesiredspeedEditField
@@ -224,26 +221,26 @@ classdef GUI < matlab.apps.AppBase
             app.DesiredspeedEditField.ValueDisplayFormat = '%.0f';
             app.DesiredspeedEditField.HorizontalAlignment = 'left';
             app.DesiredspeedEditField.FontSize = 18;
-            app.DesiredspeedEditField.Position = [152 153 71 25];
+            app.DesiredspeedEditField.Position = [152 132 71 25];
 
             % Create FeedbackEditFieldLabel
             app.FeedbackEditFieldLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.FeedbackEditFieldLabel.HorizontalAlignment = 'right';
             app.FeedbackEditFieldLabel.FontSize = 18;
-            app.FeedbackEditFieldLabel.Position = [58 111 84 22];
+            app.FeedbackEditFieldLabel.Position = [58 83 84 22];
             app.FeedbackEditFieldLabel.Text = 'Feedback';
 
             % Create FeedbackEditField
             app.FeedbackEditField = uieditfield(app.RS232PIDControllerUIFigure, 'text');
             app.FeedbackEditField.Editable = 'off';
             app.FeedbackEditField.FontSize = 18;
-            app.FeedbackEditField.Position = [152 108 71 26];
+            app.FeedbackEditField.Position = [152 80 71 26];
 
             % Create DurationSpinnerLabel
             app.DurationSpinnerLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.DurationSpinnerLabel.HorizontalAlignment = 'right';
             app.DurationSpinnerLabel.FontSize = 18;
-            app.DurationSpinnerLabel.Position = [70 199 74 22];
+            app.DurationSpinnerLabel.Position = [70 186 74 22];
             app.DurationSpinnerLabel.Text = 'Duration';
 
             % Create DurationSpinner
@@ -252,33 +249,14 @@ classdef GUI < matlab.apps.AppBase
             app.DurationSpinner.ValueDisplayFormat = '%.0f';
             app.DurationSpinner.HorizontalAlignment = 'left';
             app.DurationSpinner.FontSize = 18;
-            app.DurationSpinner.Position = [152 198 72 24];
+            app.DurationSpinner.Position = [152 185 72 24];
             app.DurationSpinner.Value = 10;
 
             % Create sLabel
             app.sLabel = uilabel(app.RS232PIDControllerUIFigure);
             app.sLabel.FontSize = 18;
-            app.sLabel.Position = [229 199 51 22];
+            app.sLabel.Position = [229 186 51 22];
             app.sLabel.Text = 's';
-
-            % Create vLabel
-            app.vLabel = uilabel(app.RS232PIDControllerUIFigure);
-            app.vLabel.FontSize = 18;
-            app.vLabel.Position = [230 65 51 22];
-            app.vLabel.Text = 'v';
-
-            % Create VoltageEditFieldLabel
-            app.VoltageEditFieldLabel = uilabel(app.RS232PIDControllerUIFigure);
-            app.VoltageEditFieldLabel.HorizontalAlignment = 'right';
-            app.VoltageEditFieldLabel.FontSize = 18;
-            app.VoltageEditFieldLabel.Position = [76 65 66 22];
-            app.VoltageEditFieldLabel.Text = 'Voltage';
-
-            % Create VoltageEditField
-            app.VoltageEditField = uieditfield(app.RS232PIDControllerUIFigure, 'text');
-            app.VoltageEditField.Editable = 'off';
-            app.VoltageEditField.FontSize = 18;
-            app.VoltageEditField.Position = [152 62 71 26];
 
             % Show the figure after all components are created
             app.RS232PIDControllerUIFigure.Visible = 'on';
@@ -289,7 +267,7 @@ classdef GUI < matlab.apps.AppBase
     methods (Access = public)
 
         % Construct app
-        function app = GUI
+        function app = Copy_of_GUI
 
             % Create UIFigure and components
             createComponents(app)
