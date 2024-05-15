@@ -22,7 +22,7 @@
 - To change the desired speed value during the simulation, simply enter a new speed value and press the "Send" button.
 - The microcontroller will automatically reset its original state after the simulation is done and is ready for the next use.
 ## Demonstration
-- Simulation video: https://drive.google.com/file/d/1-w3KMQVSkUIt08Q4CER-RvsKS7h1Xza5/view?usp=sharing
+- Simulation video: https://drive.google.com/file/d/1SYGGCjXtbVsDfEm9NgBektin4EQ8IAXG/view?usp=sharing
 ## Reference
 - Matab: https://www.mathworks.com/products/new_products/release2021b.html
 - Motor paramters: https://ctms.engin.umich.edu/CTMS/index.php?example=MotorSpeed&section=SystemModeling
