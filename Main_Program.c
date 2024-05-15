@@ -69,6 +69,8 @@ void main()
          integral+=error*tsamp;
          last_error=error;
          volt=kp*error+ki*integral+kd*derivative;  
+         if (volt>1023) volt=1023;    //PID upper and lower limits
+         else (volt<-1023) volt=-1023;
       }
       if((uartFlg==2)&&(state==2))  //Transmitting PID value to adjust the system
       {   
