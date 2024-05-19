@@ -14,7 +14,7 @@
 - PIC16F877A
 - PIC16F887
 ## Software used
-- MATLAB R2021b: design the controller's GUI and contain the DC motor model.
+- MATLAB R2021b: design the controller's GUI and modelise the DC motor.
 - PIC CCS C 5.115: program in C language and generate .hex file for Proteus.
 - Proteus 8.12: simulate the PIC16F877 microcontroller and RS232 serial ports.
 - Virtual Serial Port Driver 6.9 (VSPD): create virtual serial ports and pair them.
